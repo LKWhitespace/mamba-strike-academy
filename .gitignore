@@ -4,3 +4,4 @@ node_modules/
 .vscode/
 *.log
 mamba-strike-academy-rebuild/
+.vercel
