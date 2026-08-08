@@ -214,21 +214,44 @@
   </div>
 </section>
 
-<!-- BONUS: GLOSSARY -->
-<section id="glossary" data-msa="sec" style="position:relative;padding:clamp(60px,7.5vw,116px) clamp(20px,4vw,42px);border-top:1.5px solid var(--rule-accent);background:var(--bg-page)">
-  <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(80% 60% at 100% 0%,rgba(227,30,36,0.10) 0%,rgba(5,5,6,0) 55%);pointer-events:none"></div>
-  <div style="position:relative;z-index:2;max-width:1240px;margin:0 auto">
-    <div data-anim style="max-width:820px">
+<!-- BONUS: GLOSSARY CTA -->
+<section id="glossary" data-msa="sec" style="position:relative;overflow:hidden;padding:clamp(60px,7.5vw,116px) clamp(20px,4vw,42px);border-top:1.5px solid var(--rule-accent);background:var(--bg-page)">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(80% 60% at 100% 0%,rgba(227,30,36,0.12) 0%,rgba(5,5,6,0) 55%);pointer-events:none"></div>
+  <div style="position:relative;z-index:2;max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:center">
+    <div data-anim>
       <div style="display:flex;align-items:center;gap:12px;font-family:var(--font-body);font-weight:700;font-size:11px;letter-spacing:0.18em;color:var(--text-muted)">
         <span style="flex:0 0 auto;width:26px;height:2px;background:var(--accent)"></span>
         <span style="white-space:nowrap">בונוס · 96 מושגים · 12 פרקים</span>
       </div>
       <h2 style="margin:14px 0 0;font-family:var(--font-display-he);font-weight:700;font-size:clamp(42px,5.4vw,84px);line-height:0.94;letter-spacing:-0.01em;color:var(--text-display)">מילון מושגים למתאמן המתחיל</h2>
-      <div style="margin-top:3px;font-family:var(--font-display-he);font-weight:700;font-size:clamp(24px,2.7vw,33px);line-height:1.04;color:var(--accent)">השפה של האימון והקרב</div>
+      <div style="margin-top:3px;font-family:var(--font-display-he);font-weight:700;font-size:clamp(24px,2.7vw,33px);line-height:1.04;color:var(--accent)">השפה שמאחורי כל אימון</div>
       <img src="/assets/swoosh.png" alt="" aria-hidden="true" style="display:block;width:min(500px,78%);height:auto;margin:8px 0 0 auto">
-      <p style="margin:18px 0 0;max-width:52ch;font-family:var(--font-body);font-size:16px;line-height:1.5;color:var(--text-body)">המושגים הבסיסיים שיעזרו לך להבין את האימון, את המאמן ואת מה שקורה בקרב. הקישו על פרק כדי לפתוח אותו.</p>
+      <p style="margin:18px 0 0;max-width:52ch;font-family:var(--font-body);font-size:16px;line-height:1.5;color:var(--text-body)">כל המושגים שהמאמן ישתמש בהם — עמידות, מכות, הגנות, היאבקות, קרקע, הכנעות ותוצאות קרב. חוברת קצרה, 12 פרקים, מוכנה לצפייה.</p>
+      <div style="margin-top:26px;display:flex;flex-wrap:wrap;align-items:center;gap:12px">
+        <button id="openGlossaryBtn" type="button" class="ms-btn ms-btn--md ms-btn--primary">
+          <span>למילון המושגים</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M10 14L21 3"></path><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path></svg>
+        </button>
+        <a href="/assets/glossary.pdf" download="Mamba-Strike-Glossary.pdf" class="ms-btn ms-btn--md ms-btn--secondary">
+          <span>הורדה כ־PDF</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M7 10l5 5 5-5"></path><path d="M12 15V3"></path></svg>
+        </a>
+      </div>
     </div>
-    <div id="glossaryChapters" style="margin-top:clamp(38px,5vw,64px);display:flex;flex-direction:column;gap:14px"></div>
+    <button data-anim id="openGlossaryTile" type="button" aria-label="פתיחת מילון המושגים" style="position:relative;display:block;width:100%;padding:0;margin:0;border:1px solid var(--red-a42);border-radius:var(--radius-md);overflow:hidden;background:var(--bg-surface);cursor:pointer;transition:var(--transition-control);aspect-ratio:3/4;max-height:520px">
+      <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(135deg,#0A0A0C 0%,#111113 60%,#050506 100%)"></div>
+      <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(60% 70% at 20% 0%,rgba(227,30,36,0.28) 0%,rgba(5,5,6,0) 70%)"></div>
+      <img src="/assets/logo-symbol.svg" alt="" aria-hidden="true" style="position:absolute;top:14%;inset-inline-start:8%;width:38%;height:auto;opacity:0.9;filter:drop-shadow(0 0 40px rgba(227,30,36,0.35))">
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(22px,3vw,36px);text-align:right">
+        <div dir="ltr" style="font-family:var(--font-body);font-weight:700;font-size:11px;letter-spacing:0.18em;color:var(--text-faint);text-align:right">MAMBA STRIKE · GLOSSARY</div>
+        <h3 style="margin:8px 0 0;font-family:var(--font-display-he);font-weight:700;font-size:clamp(38px,4.6vw,68px);line-height:0.9;letter-spacing:-0.01em;color:var(--white)">מילון ה־<span style="color:var(--accent)">MMA</span></h3>
+        <div style="margin-top:6px;font-family:var(--font-display-he);font-weight:700;font-size:clamp(22px,2.4vw,30px);line-height:1;color:var(--accent)">כל המושגים</div>
+        <div style="margin-top:16px;display:inline-flex;align-items:center;gap:10px;font-family:var(--font-body);font-weight:700;font-size:12px;letter-spacing:0.14em;color:var(--white);align-self:flex-end">
+          <span>לחצו לפתיחה</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+        </div>
+      </div>
+    </button>
   </div>
 </section>
 
@@ -281,6 +304,28 @@
         </button>
         <button id="modalMark" type="button" class="ms-btn ms-btn--sm ms-btn--secondary" style="height:36px"><span>סמן כהושלם</span></button>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- PDF Modal -->
+<div id="pdfWrap" data-msa="modalwrap" role="presentation" hidden style="position:fixed;inset:0;z-index:100;background:rgba(5,5,6,0.94);align-items:center;justify-content:center;padding:clamp(12px,3vw,40px);animation:msaFade var(--dur-base) var(--ease-out)">
+  <div id="pdfPanel" data-msa="modal" role="dialog" aria-modal="true" aria-labelledby="msa-pdf-title" tabindex="-1" dir="rtl" style="position:relative;width:min(1080px,100%);height:min(92vh,1080px);max-height:100%;display:flex;flex-direction:column;background:var(--bg-surface);border:1px solid var(--red-a42);border-radius:var(--radius-lg);box-shadow:var(--shadow-lift);outline:none;overflow:hidden;animation:msaRise var(--dur-slow) var(--ease-out)">
+    <div data-msa="modalhead" style="display:flex;align-items:center;gap:clamp(12px,2vw,20px);padding:14px clamp(16px,2.4vw,26px);border-bottom:1.5px solid var(--rule-accent);flex:0 0 auto">
+      <div style="flex:1 1 auto;min-width:0">
+        <div dir="ltr" style="text-align:right;font-family:var(--font-body);font-weight:700;font-size:10px;letter-spacing:0.18em;color:var(--text-faint)">BONUS · GLOSSARY</div>
+        <h2 id="msa-pdf-title" style="margin:2px 0 0;font-family:var(--font-display-he);font-weight:700;font-size:clamp(22px,2.6vw,30px);line-height:1.02;letter-spacing:-0.01em;color:var(--white)">מילון מושגים למתאמן המתחיל</h2>
+      </div>
+      <a href="/assets/glossary.pdf" download="Mamba-Strike-Glossary.pdf" class="ms-btn ms-btn--sm ms-btn--secondary" aria-label="הורדת המילון כ־PDF" style="height:36px">
+        <span>הורדה</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M7 10l5 5 5-5"></path><path d="M12 15V3"></path></svg>
+      </a>
+      <button id="pdfClose" class="ms-iconbtn" type="button" aria-label="סגירת המילון">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg>
+      </button>
+    </div>
+    <div style="position:relative;flex:1 1 auto;min-height:0;background:#111">
+      <iframe id="pdfIframe" title="מילון מושגים למתאמן המתחיל" style="position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#111"></iframe>
     </div>
   </div>
 </div>

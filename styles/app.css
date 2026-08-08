@@ -54,6 +54,8 @@ a:hover{color:var(--accent-hover)}
   [data-msa=hero-grid]{grid-template-columns:minmax(0,1fr) !important}
   [data-msa=feature-grid]{grid-template-columns:minmax(0,1fr) !important}
   [data-msa=about-grid]{grid-template-columns:minmax(0,1fr) !important}
+  #glossary > div:nth-child(2){grid-template-columns:minmax(0,1fr) !important}
+  #openGlossaryTile{max-height:420px !important;aspect-ratio:16/10 !important}
 }
 @media (max-width:860px){
   [data-msa=navlinks]{display:none !important}
@@ -129,40 +131,3 @@ a:hover{color:var(--accent-hover)}
 body.ms-scroll-lock{overflow:hidden}
 html.ms-scroll-lock{overflow:hidden}
 
-/* Glossary */
-.ms-chapter{background:var(--bg-surface);border:1px solid var(--white-a08);border-radius:var(--radius-md);overflow:hidden;transition:var(--transition-control)}
-.ms-chapter[open]{border-color:var(--red-a42)}
-.ms-chapter > summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:clamp(14px,2vw,22px);padding:20px clamp(18px,2.6vw,28px);user-select:none}
-.ms-chapter > summary::-webkit-details-marker{display:none}
-.ms-chapter > summary:focus-visible{outline:2px solid var(--focus-ring);outline-offset:-2px}
-.ms-chapter-num{flex:0 0 auto;font-family:var(--font-display);font-weight:700;font-size:clamp(30px,3.4vw,44px);line-height:0.9;color:var(--accent);min-width:1.6em;text-align:center;font-variant-numeric:tabular-nums}
-.ms-chapter-headings{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:2px}
-.ms-chapter-title{margin:0;font-family:var(--font-display-he);font-weight:700;font-size:clamp(24px,2.6vw,33px);line-height:1.04;letter-spacing:-0.01em;color:var(--white)}
-.ms-chapter-sub{font-family:var(--font-body);font-weight:700;font-size:11px;letter-spacing:0.18em;color:var(--text-muted)}
-.ms-chapter-caret{flex:0 0 auto;width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:1.5px solid var(--white-a12);color:var(--text-body);transition:transform var(--dur-base) var(--ease-out),color var(--dur-fast) var(--ease-out),border-color var(--dur-fast) var(--ease-out)}
-.ms-chapter[open] .ms-chapter-caret{transform:rotate(180deg);color:var(--accent);border-color:var(--red-a42)}
-.ms-chapter:hover{border-color:var(--red-a42)}
-.ms-chapter:hover .ms-chapter-caret{color:var(--accent);border-color:var(--red-a42)}
-.ms-chapter-body{padding:0 clamp(18px,2.6vw,28px) clamp(22px,3vw,32px);border-top:1.5px solid var(--rule-accent)}
-.ms-chapter-intro{margin:22px 0 0;max-width:64ch;font-family:var(--font-body);font-size:15px;line-height:1.55;color:var(--text-body)}
-.ms-term-grid{margin-top:22px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0;border-top:1.5px solid var(--rule-accent);border-bottom:1.5px solid var(--rule-accent)}
-.ms-term{display:flex;gap:14px;align-items:flex-start;padding:18px 6px;border-bottom:1.5px solid var(--rule-accent)}
-.ms-term:last-child{border-bottom:0}
-.ms-term-num{flex:0 0 34px;width:34px;font-family:var(--font-display);font-weight:700;font-size:36px;line-height:0.9;color:var(--accent);text-align:right;font-variant-numeric:tabular-nums}
-.ms-term-divider{width:1.5px;align-self:stretch;background:var(--rule-accent);flex:0 0 auto}
-.ms-term-body{flex:1 1 auto;min-width:0;padding-inline-end:6px}
-.ms-term-en{font-family:var(--font-display);font-weight:700;font-size:26px;line-height:0.9;letter-spacing:0.01em;text-transform:uppercase;color:var(--gray-100);direction:ltr;text-align:right}
-.ms-term-he{margin-top:2px;font-family:var(--font-body);font-weight:700;font-size:20px;line-height:1.1;color:var(--accent);text-align:right}
-.ms-term-desc{margin-top:6px;font-family:var(--font-body);font-size:14.5px;line-height:1.45;color:var(--text-body);text-align:right;text-wrap:pretty}
-.ms-chapter-remember{margin-top:22px}
-@media (max-width:520px){
-  .ms-chapter > summary{padding:16px 14px;gap:12px}
-  .ms-chapter-body{padding:0 14px 20px}
-  .ms-term{padding:14px 4px}
-  .ms-term-num{flex:0 0 28px;width:28px;font-size:28px}
-  .ms-term-en{font-size:22px}
-  .ms-term-he{font-size:18px}
-}
-@media (prefers-reduced-motion:reduce){
-  .ms-chapter,.ms-chapter-caret{transition:none}
-}
