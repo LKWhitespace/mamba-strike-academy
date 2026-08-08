@@ -341,7 +341,6 @@
     });
 
     // Header buttons
-    document.getElementById('startCourseBtn').addEventListener('click', () => openLesson(0));
     document.getElementById('menuBtn').addEventListener('click', toggleMenu);
     document.querySelectorAll('#menuPanel [data-menu-link]').forEach((a) => {
       a.addEventListener('click', () => closeMenuPanel());
