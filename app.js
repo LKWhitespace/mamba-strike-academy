@@ -416,6 +416,9 @@
     };
     document.getElementById('openGlossaryBtn').addEventListener('click', openPdf);
     document.getElementById('openGlossaryTile').addEventListener('click', openPdf);
+    document.querySelectorAll('[data-open-glossary]').forEach((el) => {
+      el.addEventListener('click', (e) => { e.preventDefault(); openPdf(); });
+    });
     document.getElementById('pdfClose').addEventListener('click', closePdf);
     document.getElementById('pdfWrap').addEventListener('click', (e) => {
       if (e.target === e.currentTarget) closePdf();
