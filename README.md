@@ -31,4 +31,10 @@ vercel.json           # cache headers for /assets and /styles
 
 ## Deploy
 
-Static — deployed to Vercel with zero build config.
+Nothing here is deployed as a site any more. The Vercel project attached to this
+repo serves only the catch-all 308 in `vercel.json`, pointing at
+`https://mambastrike.co.il/academy/`, and is due to be deleted.
+
+The live Academy is deployed by GitHub Pages from the `academy/` directory of
+[`mamba-strike-mma`](https://github.com/LKWhitespace/mamba-strike-mma) — edit it
+there.
